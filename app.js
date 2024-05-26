@@ -224,50 +224,102 @@ const products = [
     }
 ]
 
-
-// products.map((item)=>{
-// // console.log(item.category);
-
-// div.innerHTML += `
-//     <h1>product name: ${item.brand} ${item.name }</h1>
-//     <h1>Category: ${item.category}</h1>
-//     <h1>Price: ${item.price}</h1>
-//     </hr>
-// `
-
-
-// })
-
-
-products.map((item) => {
-
-    // console.log(item.category) 1
-    
-    div.innerHTML +=`
-    
-    <h1>Product name: ${item.brand} ${item.name}</h1>
-    
-    <h1>Category: ${item.category}</h1>
-    
-    <h1>Price: ${item.price}</h1>
-    <hr/
-    `
-  })
-
-
-
-
-
-
-
-
-
-
-
-
 const div = document.querySelector("div");
 
+products.map((item) => {
+// console.log(item.category);
 
-// div.innerHTML += `<h1>${products}</h1>`
+div.innerHTML += `
+    <h1>product name: ${item.brand} ${item.name }</h1>
+    <h1>Category: ${item.category}</h1>
+    <h1>Price: ${item.price}</h1>
+    </hr>
+`
+})
 
-// console.log(products);
+
+const filteredItem = (btn) => {
+    div.innerHTML += ``
+    console.log(btn.innerHTML);
+    const filtered = products.filter(item =>{
+        return item.category === btn.innerHTML
+    }).map(item => {
+        div.innerHTML += `
+        <h1>product name: ${item.brand} ${item.name }</h1>
+        <h1>Category: ${item.category}</h1>
+        <h1>Price: ${item.price}</h1>
+        </hr>
+        `
+    })
+    // console.log(filtered);
+}
+
+
+(all) => {
+    products.map((item) => {
+        // console.log(item.category);
+        
+        div.innerHTML += `
+            <h1>product name: ${item.brand} ${item.name }</h1>
+            <h1>Category: ${item.category}</h1>
+            <h1>Price: ${item.price}</h1>
+            </hr>
+        `
+        })
+}
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log(products);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
